@@ -27,6 +27,9 @@ let renderCurrentTimer = () => {
 */
 let renderUser = (evnet) => {
 	
+	//HTML요소의 기본 이벤트 중지 
+	event.preventDefault();
+	
 	console.dir('registSchedule : ' + event.target.className);
 	//사용자가 입력한 값(사용자이름)을 받아
 	 let input = document.querySelector('.inp_username').value;
@@ -37,6 +40,9 @@ let renderUser = (evnet) => {
 
 //일정 등록하는 함수(데이터추가)
 let registSchedule = (event) => {
+	
+	//HTML요소의 기본 이벤트 중지 
+	event.preventDefault();
 	
 	console.dir('registSchedule : ' + event.target.className);
 	
