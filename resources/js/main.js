@@ -70,7 +70,7 @@ let registSchedule = (event) => {
 	
 	
 }
-//*************************************************삭제가 안됨!! 시발 */
+
 let removeSchedule = event =>{
 	let curPage = Number(document.querySelector('#currentPage').textContent);
 	let todoList = JSON.parse(localStorage.getItem('todo'));
@@ -98,7 +98,7 @@ let renderSchedule = (todoList) => { //생성하는 시점
 	// Your Work쪽에 뿌려질 수 있도록 해보자
 	todoList.forEach(schedule => { //e : 작업들 work들. 
 		let workDiv = document.createElement('div'); //div생성
-		workDiv.innerHTML = `<i class="fas fa-trash-alt" data-idx=${schedule.idx}></i> ${schedule.idx}`; //id를 갖다 쓸 수 있게 data-idx추가
+		workDiv.innerHTML = `<i class="fas fa-trash-alt" data-idx=${schedule.idx}></i> ${schedule.work}`; //id를 갖다 쓸 수 있게 data-idx추가
 		document.querySelector('.todo-list').append(workDiv); //이렇게 하면 style로 값을 잡아줄 수 있음
 	});
 	
