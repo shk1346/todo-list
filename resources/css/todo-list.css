@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+html, body{
+	height: 100%;
+}
+
+body{
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.location{
+	display : flex;
+	justify-content : flex-end;
+	align-items:center;
+	height: 10vh;
+}
+
+.txt_location{
+	color:white;
+	padding-right:20px;
+	font-size: 1vw; /* vw : 가로세로 비율 고정 */
+}
+
+.main{
+	display:flex;
+	/* justify-content:space-between; */
+	justify-content :center;
+	align-items:center;
+	height: 80%;
+}
+
+.wrap_todo{
+	width:40vw;
+	height: 20vw;
+	/* margin-right:20vw; */
+	background-color: rgba(0,0,0,0.3);
+}
+
+.wrap_clock{
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	height: 40%;
+}
+
+.wrap_clock>div{
+	font-size: 2vw;
+	color:white;
+	font-weight: bolder;
+	line-height: 2;
+}
+
+.wrap_username, .box_todo{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	height: 60%;
+}
+
+.wrap_username>form, .box_todo>form{
+	width: 100%;
+}
+
+.inp_username, .inp_todo{
+	position:relative;
+	background-color:transparent;
+	padding:1vw;
+	border-radius: 35%;
+	border-top: 0;
+	border-left: 0;
+	border-right:0;
+	border-bottom-color: white;	
+	width: 60%;
+	left:20%;
+	color:white;
+	font-size: 3vw;
+	outline: none; /* 입력칸에 포커스가 안 잡히도록 */
+}
+
+.inp_username::placeholder, .inp_todo::placeholder{
+	color:white;
+	font-size: 2vw;
+	text-align: center;
+}
+
+.todo-list{
+	display:none; /* 로그인 전엔 none처리하여 안 보이게, 로그인이 되면 block으로 바뀌어야됨 */
+	background-color: rgba(0,0,0,0.3);
+	height: 100vh;
+	width: 20vw;
+	
+}
+
+.todo-list>p{
+	color:white;
+	font-weight: bolder;
+	text-align: center;
+	font-size: 2vw;
+	margin: 10px 0 20px 0; /* 위, 아래에만 마진 */
+	
+}
+
+.todo-list>div{
+	position:relative;
+	color: white;
+	text-align: center;
+	font-size: 1.5vw;
+	width:80%;
+	left:10%;
+	background-color: red;
+	padding: 10px 0 10px 0;
+	margin: 10px 0 10px 0;
+}
+
+
+.bg-info{
+	display :flex;
+	align-items:center;
+	height: 10%;
+}
+
+.txt_bg{
+	font-size:1vw;
+	padding-left:20px;
+	color:white;
+}
+
